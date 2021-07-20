@@ -1,10 +1,15 @@
-<div class="container my-3">
+<div class="container d-flex flex-column align-items-center my-3">
   <h2 class="d-flex justify-content-center my-5">URL Shortener</h2>
-  <i class="fas fa-link link-icon my-5"></i>
-  <form action="/" method="POST">
+  <i class="fas fa-link link-icon mb-5"></i>
+  <form action="/" method="POST" class="col-12 col-md-8 needs-validation" novalidate>
     <div class="mb-3">
-      <input type="url" class="form-control mb-2" name="url" id="url" placeholder="Input URL here" aria-describedby="urlHelp">
+      <input type="url" class="form-control mb-2" name="url" id="url" placeholder="Input URL here" aria-describedby="urlHelp" required>
+      <div class="invalid-feedback">
+        Please input an URL.
+      </div>
     </div>
     <button type="submit" class="btn btn-primary">Shorten</button>
   </form>
 </div>
+
+<script src="./javascript/index.js"></script>

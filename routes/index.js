@@ -9,7 +9,8 @@ router.get('/', (req, res) => {
 })
 
 router.post('/', async (req, res) => {
-  const url = req.body.url
+  const url = req.body.url.trim().replace(/\/$/, '')
+  if (!url) res.redirect('/')
 
   // check if the URL exist
   let checkUrl = async (url) => {

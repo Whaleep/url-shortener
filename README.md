@@ -1,5 +1,5 @@
 # 短網址產生器 URL shortener
-一個用 Express 和 MongoDB 所建立簡單的餐廳清單網路應用程式。
+一個用 Express 和 MongoDB 所建立簡單的短網址產生器網路應用程式。
 
 ## 特色 Features
 - 可以在首頁表單輸入原始網址，送出表單之後，畫面會回傳格式化後的短網址

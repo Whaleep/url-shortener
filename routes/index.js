@@ -13,7 +13,7 @@ router.post('/', async (req, res) => {
   if (!url) res.redirect('/')
 
   // check if the URL exist
-  let checkUrl = async (url) => {
+  const checkUrl = async (url) => {
     try {
       const shorturl = await Shorturl.find({ url }).lean().exec()
       if (shorturl.length === 1) {
@@ -27,7 +27,7 @@ router.post('/', async (req, res) => {
   }
 
   // check if the id exist
-  let checkId = async (id) => {
+  const checkId = async (id) => {
     try {
       const findId = await Shorturl.find({ id }).lean().exec()
       return findId.length
@@ -50,7 +50,6 @@ router.post('/', async (req, res) => {
       })
       .catch(error => console.log(error))
   }
-
 })
 
 router.get('/:id', (req, res) => {
